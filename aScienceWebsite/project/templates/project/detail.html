@@ -59,9 +59,9 @@
     {%  for image in project.image_set.all %}
    <input type="radio" id="image{{ forloop.counter }}" name="image" value="{{ name.id }}">
     <label for="image{{ forloop.counter }}" >
-
-
-        <img src="{% static "project/images/ocean1.jpeg" %}" alt="Image Description">
+       {% static "" as baseUrl %}
+        <!--<img src="{{ baseUrl }}/project/images/{{image.name}}">-->
+       <img src="{% static "project/images/ocean1.jpeg" %}" alt="Image Description">
     </label>  <br>
     {% endfor %}
 </form>
