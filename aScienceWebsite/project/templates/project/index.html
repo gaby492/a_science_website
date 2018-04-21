@@ -2,8 +2,8 @@
     <h3> Here are all my Projects </h3>
     <ul>
         {% for project in all_projects %}
-        <li><a href="/project/{{project.id}}">{{project.name}}</a></li>
-        {% endfor  %}
+            <li><a href="{% url 'project:detail' project.id %}">{{project.name}}</a></li>
+        {% endfor %}
     </ul>
 {% else %}
     <h3> You don't have any project</h3>

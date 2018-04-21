@@ -1,0 +1,31 @@
+{% load static %}
+
+
+<img src="{% static "my_app/example.jpg" %}" alt="My image">
+
+<img src = "{{project.name}}">
+
+<h1>{{project.name}}</h1>
+<h2>{{project.team_leader}}</h2>
+<h3>{{project.content}}</h3>
+
+<!--<ul>
+    {% for image in project.image_set.all %}
+    <li>{{image.name}}</li>
+    {% endfor %}
+</ul> -->
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="{% url 'project:detail' project.id %}" method="post">
+    {% csrf_token %}
+    {%  for image in project.image_set.all %}
+    <!--    <input type="radio" id="image{{ forloop.counter }}" name="image" value="{{ name.id }}">-->
+    <label for="image{{ forloop.counter }}">
+        {{ image.name}}
+
+    </label>  <!--<br>-->
+    {% endfor %}
+</form>

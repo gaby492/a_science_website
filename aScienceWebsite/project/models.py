@@ -15,4 +15,9 @@ class Project(models.Model):
 class Image(models.Model): #This table will contain the content of the projects
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     name = models.CharField(max_length=400)   #Name or location of the image
+    is_favorite = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.name
+
 

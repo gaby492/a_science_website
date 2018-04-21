@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Static URL definition
+STATIC_URL = '/static/'
+
 
 # Application definition
 
