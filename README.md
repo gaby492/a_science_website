@@ -21,10 +21,10 @@ The main goal of this project is the development of a space that allows a specif
       python manage.py runserver
     
     then go to your web browser and try any of this links:
-      127.0.0.1/admin
-      127.0.0.1/project/1
-      127.0.0.1/project/2
-      127.0.0.1/project/3
+      *  127.0.0.1/admin
+      *  127.0.0.1/project/1
+      *  127.0.0.1/project/2
+      *  127.0.0.1/project/3
       
       
     
